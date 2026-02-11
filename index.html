@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fce4ec; /* Soft Pink */
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #ff4081; /* Vibrant Pink */
+            color: white;
+            padding: 100px 20px;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .container {
+            max-width: 800px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 { font-size: 3rem; margin-bottom: 10px; }
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            overflow: hidden;
+        }
+        .photo-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+        .message { font-style: italic; color: #555; line-height: 1.6; }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff4081;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery div {
+            height: 150px;
+            background: #eee;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Happy Birthday, [Friend's Name]!</h1>
+    <p>Celebrating another year of being awesome.</p>
+</header>
+
+<div class="container">
+    <div class="photo-placeholder">
+        <img src="https://via.placeholder.com/200" alt="Birthday Person">
+    </div>
+    
+    <h2>A Special Message</h2>
+    <p class="message">
+        "To the person who makes every day brighter—may your year be filled with as much joy as you bring to everyone around you. Cheers to you!"
+    </p>
+
+    <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+    <h3>The Plan</h3>
+    <p>📅 <strong>When:</strong> Saturday at 7:00 PM</p>
+    <p>📍 <strong>Where:</strong> [Location Name/Address]</p>
+    
+    <a href="mailto:your-email@example.com?subject=RSVP" class="btn">RSVP via Email</a>
+
+    <h3>Memories</h3>
+    <div class="gallery">
+        <div></div> <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+</body>
+</html>
