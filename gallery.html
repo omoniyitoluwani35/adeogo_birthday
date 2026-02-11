@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories of Adeogo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1 { color: #ff4081; margin-bottom: 40px; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #ff4081;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link">← Back to Wishes</a>
+    <h1>Our Favorite Memories</h1>
+
+    <div class="gallery-grid">
+        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~9.png" class="gallery-item">
+        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~8.png" class="gallery-item">
+        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~7.png" class="gallery-item">
+        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~6.png" class="gallery-item">
+        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~5.png" class="gallery-item">
+        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~4.png" class="gallery-item">
+    </div>
+
+</body>
+</html>
