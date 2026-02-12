@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vault</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #8b0000;
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .login-box {
+            text-align: center;
+            padding: 40px;
+            border: 1px solid #333;
+            background: rgba(20, 20, 20, 0.9);
+            box-shadow: 0 0 30px rgba(139, 0, 0, 0.2);
+        }
+
+        h2 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #8b0000;
+            color: #c0c0c0;
+            padding: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+            outline: none;
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 30px;
+            background: transparent;
+            color: #8b0000;
+            border: 1px solid #8b0000;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            background: #8b0000;
+            color: #000;
+            box-shadow: 0 0 15px #8b0000;
+        }
+
+        #error-msg {
+            color: #555;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Identify Yourself</h2>
+        <input type="password" id="passwordField" placeholder="Enter Secret Key">
+        <p id="error-msg"></p>
+        <button class="btn" onclick="checkPassword()">Unlock</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const pass = document.getElementById('passwordField').value.toLowerCase();
+            const error = document.getElementById('error-msg');
+            
+            if (pass === "adeogo") {
+                // Redirect to your main index page
+                window.location.href = "welcome.html";
+            } else {
+                error.innerText = "Access Denied. Try again.";
+                document.getElementById('passwordField').value = "";
+            }
+        }
+
+        // Allow "Enter" key to submit
+        document.getElementById('passwordField').addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>
