@@ -4,44 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memories of Adeogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
+        :root {
+            --primary-bg: #0a0a0a;
+            --accent-red: #8b0000;
+            --text-silver: #c0c0c0;
+        }
+
         body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #fce4ec;
+            font-family: 'Georgia', serif;
+            background-color: var(--primary-bg);
+            color: var(--text-silver);
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px;
             text-align: center;
+            overflow-x: hidden;
         }
 
-        h1 { color: #ff4081; margin-bottom: 40px; }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.03);
+        h1 { 
+            color: var(--accent-red); 
+            margin: 40px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
         }
 
         .back-link {
             display: inline-block;
-            margin-bottom: 20px;
-            color: #ff4081;
+            margin-top: 20px;
+            color: var(--accent-red);
             text-decoration: none;
             font-weight: bold;
+            border: 1px solid var(--accent-red);
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--accent-red);
+            color: black;
+        }
+
+        /* Slideshow Container */
+        .swiper {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            margin: 40px auto;
+        }
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid #222;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: contrast(110%);
+        }
+
+        /* Custom Navigation Colors */
+        .swiper-button-next, .swiper-button-prev {
+            color: var(--accent-red) !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: var(--accent-red) !important;
         }
     </style>
 </head>
@@ -50,14 +85,39 @@
     <a href="index.html" class="back-link">← Back to Wishes</a>
     <h1>Our Favorite Memories</h1>
 
-    <div class="gallery-grid">
-        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~9.png" class="gallery-item">
-        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~8.png" class="gallery-item">
-        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~7.png" class="gallery-item">
-        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~6.png" class="gallery-item">
-        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~5.png" class="gallery-item">
-        <img src="src/Gemini_Generated_Image_q1mtmoq1mtmoq1mt~4.png" class="gallery-item">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="src/1.jpeg"></div>
+            <div class="swiper-slide"><img src="src/2.jpeg"></div>
+            <div class="swiper-slide"><img src="src/3.jpeg"></div>
+            <div class="swiper-slide"><img src="src/4.jpeg"></div>
+            <div class="swiper-slide"><img src="src/5.jpeg"></div>
+            <div class="swiper-slide"><img src="src/6.jpeg"></div>
+            <div class="swiper-slide"><img src="src/7.jpeg"></div>
+            <div class="swiper-slide"><img src="src/8.jpeg"></div>
+            <div class="swiper-slide"><img src="src/9.jpeg"></div>
+            <div class="swiper-slide"><img src="src/10.jpeg"></div>
+            <div class="swiper-slide"><img src="src/11.jpeg"></div>
+            <div class="swiper-slide"><img src="src/12.jpeg"></div>
+            <div class="swiper-slide"><img src="src/13.jpeg"></div>
+            <div class="swiper-slide"><img src="src/13.jpeg"></div>
+            <div class="swiper-slide"><img src="src/14.jpeg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            keyboard: { enabled: true },
+            effect: 'fade', // Gives it a moody, ghostly transition
+            fadeEffect: { crossFade: true }
+        });
+    </script>
 </body>
 </html>
